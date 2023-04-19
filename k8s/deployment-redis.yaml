@@ -1,0 +1,22 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bb-cache
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bb-cache
+  template:
+    metadata:
+      labels:
+        app: bb-cache
+    spec:
+      containers:
+        - name: bb-cache
+          image: redis:alpine
+          ports:
+            - containerPort: 6379
+          # args --requirepass 1020304050
+          command: ["redis-server", "--requirepass", "1020304050"]
