@@ -1,4 +1,4 @@
-module github.com/AlperRehaYAZGAN/cn-turkey-workshop-demo
+module github.com/huseyinyener/argocd-go-k8s
 
 go 1.17
 
